@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Cats As a Service
+
+Resources:
+  Products:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      CodeUri: ./
+      Runtime: nodejs4.3
+      Events:
+        HtmlPage:
+          Type: Api
+          Properties:
+            Path: /
+            Method: GET
