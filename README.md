@@ -8,7 +8,7 @@
 
 1. `sam package --template-file template.yaml --s3-bucket sanathkr-test --output-template-file packaged.yaml`
 
-1. `sam deploy --template-file /Users/sanathkr/Desktop/cats/output.yaml --stack-name cats-demo --capabilities CAPABILITY_IAM`
+1. `sam deploy --template-file ./packaged.yaml --stack-name cats-demo --capabilities CAPABILITY_IAM`
 
 1. `git push origin master`
 
